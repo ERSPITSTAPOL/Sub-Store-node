@@ -53,7 +53,7 @@ async function processSingleInput(input, platform) {
     let headers = {};
     const isHttpInput = /^https?:\/\//i.test(input);
     if (isHttpInput) {
-        const response = await fetchResponse(input, 'clash.mate');
+        const response = await fetchResponse(input, 'clash.meta');
         headers = response?.headers ?? {};
         data = response?.data ?? response;
     }
